@@ -1,0 +1,39 @@
+[data-slide] {
+  position: relative;
+}
+[data-slide] > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+[data-slide] > .active {
+  position: relative;
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+
+/* 6 CSS recomendado para a navegação */
+[data-slide-nav] {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+}
+[data-slide-nav] > button {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 4px;
+  padding: 0px;
+  border-radius: 6px;
+  border: 1px solid #646464;
+  background-color: #fff;
+  text-indent: -100px;
+  overflow: hidden;
+}
+[data-slide-nav] > button.active {
+  transform: scale(1.5);
+}
